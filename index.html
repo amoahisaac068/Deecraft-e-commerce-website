@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deecraft luxury bags">
+  <title>Deecraft | Luxury Bags</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#">DEECRAFT</a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <button id="cartButton" class="cart-button" type="button">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Premium collection</p>
+      <h1>Carry elegance<br>everywhere.</h1>
+      <p>Thoughtfully selected bags for every occasion.</p>
+      <a class="primary-button" href="#shop">Explore collection</a>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2>Luxury essentials</h2>
+        </div>
+        <select id="categoryFilter" aria-label="Filter products">
+          <option value="All">All categories</option>
+        </select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your cart</h2>
+      <button id="closeCart" class="icon-button" type="button" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">GHS 0.00</strong></div>
+      <button id="checkoutButton" class="checkout-button" type="button">Checkout</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
