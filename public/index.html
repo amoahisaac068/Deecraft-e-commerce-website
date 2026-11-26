@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Deecraft luxury bags">
+  <meta name="referrer" content="same-origin">
   <title>Deecraft | Luxury Bags</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -46,12 +47,19 @@
     <div id="cartItems" class="cart-items"></div>
     <div class="cart-footer">
       <div class="cart-total"><span>Total</span><strong id="cartTotal">GHS 0.00</strong></div>
-      <button id="checkoutButton" class="checkout-button" type="button">Checkout</button>
+      <form id="checkoutForm" class="checkout-form" hidden>
+        <label for="checkoutEmail">Email for your order</label>
+        <input id="checkoutEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <button id="checkoutButton" class="checkout-button" type="submit">Pay with Paystack</button>
+        <p class="checkout-note">Card or Mobile Money. We’ll email you to arrange fulfillment.</p>
+      </form>
+      <p id="paymentStatus" class="payment-status" role="status" tabindex="-1" hidden></p>
+      <button id="checkPayment" class="check-payment" type="button" hidden>Check payment status</button>
     </div>
   </aside>
   <div id="overlay" class="overlay"></div>
 
   <div id="toast" class="toast" role="status"></div>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

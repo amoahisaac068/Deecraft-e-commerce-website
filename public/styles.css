@@ -40,7 +40,15 @@ select { padding:12px 38px 12px 12px; border:1px solid #ccc; background:white; }
 .remove-button { border:0; background:none; color:#777; cursor:pointer; }
 .cart-footer { border-top:1px solid #eee; padding:20px 24px; }
 .cart-total { display:flex; justify-content:space-between; margin-bottom:16px; }
+.checkout-form:not([hidden]) { display:grid; gap:8px; }
+.checkout-form label { font-size:14px; font-weight:bold; }
+.checkout-form input { width:100%; padding:11px 12px; border:1px solid #aaa398; border-radius:0; font:inherit; }
 .checkout-button { width:100%; border:0; padding:16px; background:var(--ink); color:white; cursor:pointer; }
+.checkout-button:disabled, .check-payment:disabled { opacity:.65; cursor:wait; }
+.checkout-note, .payment-status { font-size:13px; line-height:1.5; margin:0; overflow-wrap:anywhere; }
+.checkout-note { color:#605a4e; }
+.payment-status { margin-top:10px; padding:10px 12px; background:var(--cream); }
+.check-payment { margin-top:8px; padding:8px 0; color:var(--ink); background:none; border:0; text-decoration:underline; cursor:pointer; }
 .toast { position:fixed; left:50%; bottom:30px; transform:translate(-50%,100px); background:var(--ink); color:white; padding:12px 18px; transition:.3s; z-index:60; }
 .toast.show { transform:translate(-50%,0); }
 @media(max-width:800px) { .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
